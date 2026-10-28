@@ -15,8 +15,6 @@ async def main():
               document.querySelector('header').style.display=(i===0)?'':'none';
               document.querySelector('header').style.position='static';
               document.querySelector('footer').style.display=(i===ps.length-1)?'':'none';
-              const sc=document.querySelector('.sticky-cta'); if(sc){sc.style.position='static';sc.style.display=(i===ps.length-1)?'':'none';}
-              document.body.style.paddingBottom='0';
               window.scrollTo(0,0);
             }""", i)
             await pg.wait_for_timeout(300)
