@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- BUILD_TAG: swc2026_ptarmigan_ver1.0 / 2026-10-28 -->
+<!-- BUILD_TAG: swc2026_ptarmigan_ver1.1 / 2026-10-28 -->
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -942,6 +942,14 @@ body{
 .info-tbl .note{color:var(--ink);font-size:13px;margin-top:2px;}
 .info-date{font-weight:900;color:var(--red);font-size:17px;}
 
+/* トップのカード：幅が狭いときの折り返し */
+.nobr{display:inline-block;}
+.hero-card .p{flex-wrap:wrap;justify-content:center;}
+.hero-card .p-date,.hero-card .p-unit,.hero-card .p-free{white-space:nowrap;}
+.hero-card .p-date{font-size:clamp(36px,4.4vw,56px);}
+.hero-card .hc-right .p-unit{font-size:clamp(20px,2.3vw,30px);}
+.hero-card .hc-left,.hero-card .hc-right{text-align:center;}
+
 /* 冒頭の p{color:#000!important} より優先する */
 .hero-go{color:var(--navy)!important;}
 .steps4 .st-step{color:var(--accent)!important;}
@@ -978,7 +986,7 @@ footer p{color:#fff!important;}
   <div class="wrap">
     <h1>
       <span class="sub">お困りごとを迅速に丸っと解決！</span>
-      <span class="kw">ＰＨＰ重大脆弱性の対応と修復安定へ</span>
+      <span class="kw"><span class="nobr">ＰＨＰ重大脆弱性の</span><span class="nobr">対応と修復安定へ</span></span>
     </h1>
     <p class="hero-go" lang="en">Thunderbirds Are Go!</p>
     <div class="hero-price">
