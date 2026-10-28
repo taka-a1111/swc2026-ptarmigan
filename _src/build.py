@@ -7,7 +7,7 @@ import sys, os, datetime
 
 src, out = sys.argv[1], sys.argv[2]
 comp = sys.argv[sys.argv.index('--comp') + 1] if '--comp' in sys.argv else None
-BUILD_TAG = 'swc2026_ptarmigan_ver1.1 / 2026-10-28'
+BUILD_TAG = 'swc2026_ptarmigan_ver1.2 / 2026-10-28'
 
 t = open(os.path.join(src, 'template.html'), encoding='utf-8').read()
 css = open(os.path.join(src, 'base_v1.css'), encoding='utf-8').read() + open(os.path.join(src, 'add.css'), encoding='utf-8').read()
