@@ -1,0 +1,89 @@
+
+/* ===== 緊急対策PHP：ここから ===== */
+body{
+  font-family:"游ゴシック","Yu Gothic","游ゴシック体",YuGothic,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,"メイリオ","Noto Sans JP","Noto Sans CJK JP","MS PGothic",sans-serif;
+  padding-bottom:0;
+}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* トップ */
+.hero h1 .kw{display:block;}
+.hero-go{margin:6px 0 0;font-size:30px;font-weight:900;font-style:italic;color:var(--navy);letter-spacing:.01em;line-height:1.3;}
+.hero-card .p-free{font-size:72px;letter-spacing:.02em;}
+.hero-card .p-date{font-size:56px;letter-spacing:-.01em;}
+.hero-card .hc-right .p-unit{font-size:30px;}
+.media-slot{aspect-ratio:2000/848;}
+.media-slot img{object-fit:cover;}
+@media (max-width:760px){ .media-slot{aspect-ratio:2000/848;} }
+@media (max-width:700px){
+  .hero-go{font-size:22px;}
+  .hero-card .p-free{font-size:52px;}
+  .hero-card .p-date{font-size:40px;}
+  .hero-card .hc-right .p-unit{font-size:22px;}
+  .hero-card .hc-left,.hero-card .hc-right{text-align:center;}
+  .hero-card .p{justify-content:center;flex-wrap:wrap;}
+}
+
+/* 4つの作業 */
+.steps4{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.steps4 .plan{padding:20px 16px;text-align:center;align-items:center;}
+.steps4 .st-step{margin:0 0 4px;font-size:22px;font-weight:900;color:var(--accent);line-height:1;}
+.steps4 .plan h3{font-size:18px;margin:0 0 10px;}
+.steps4 .price{font-size:30px;}
+.steps4 .scope{margin:8px 0 0;font-size:14px;line-height:1.6;}
+.steps4 .time{margin:auto 0 0;padding-top:10px;border-top:1px dashed var(--line);width:100%;font-size:14px;}
+.steps4 .time b{font-size:20px;color:var(--red);}
+.note{display:block;font-size:12.5px;color:var(--red);}
+.free-badge{display:inline-block;background:var(--red);color:#fff;font-weight:900;font-size:24px;line-height:1.3;padding:4px 16px;border-radius:6px;}
+.free-badge.sm{font-size:14px;padding:2px 10px;}
+@media (max-width:900px){ .steps4{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:560px){ .steps4{grid-template-columns:1fr;} }
+.btns.one{grid-template-columns:minmax(0,420px);justify-content:center;}
+
+/* ごあいさつ */
+.msg{max-width:820px;}
+.msg p{margin:0 0 12px;font-size:16px;line-height:1.9;}
+.msg b{background:linear-gradient(transparent 62%,var(--yellow) 62%);}
+.sign{max-width:820px;border-left:5px solid var(--navy);}
+.sign p{margin:0;}
+.sg-co{font-size:14px;font-weight:700;}
+.sg-name{font-size:18px;font-weight:900;margin:2px 0 8px!important;}
+.sg-line{font-size:14.5px;line-height:1.9;word-break:break-all;}
+.sg-lbl{font-size:12px;font-weight:800;color:var(--navy);margin-right:8px;letter-spacing:.06em;}
+
+/* ＦＡＱ（番号は本文の文字） */
+.qa-num dt{padding-left:0;}
+.qa-num dt:before{content:none;}
+.qa-num .qn{display:inline-block;min-width:3.2em;color:var(--accent);font-weight:900;}
+
+/* ご提案 */
+.answer-go{margin:8px 0 0;font-size:22px;font-weight:900;font-style:italic;color:var(--yellow);}
+.price-tbl th[scope=row]{color:var(--navy);}
+.price-tbl td:nth-child(2),.price-tbl td:nth-child(4){white-space:nowrap;font-weight:700;}
+.price-tbl thead th{background:var(--navy-l);}
+@media (max-width:640px){
+  .price-tbl thead{display:none;}
+  .price-tbl td[data-label]::before{content:attr(data-label);display:inline-block;min-width:3.5em;margin-right:8px;font-size:12px;font-weight:800;color:var(--navy);}
+  .price-tbl th[scope=row]{background:var(--navy-l);}
+}
+.req{list-style:none;margin:0;padding:0;}
+.tc-no{display:inline-flex;align-items:center;justify-content:center;width:1.8em;height:1.8em;margin-right:10px;border-radius:50%;background:var(--navy);color:#fff;font-size:14px;font-weight:900;}
+.req .og-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px;}
+.req .og-tags li{background:var(--navy-l);color:var(--navy);border:1px solid #cddff2;border-radius:20px;padding:5px 13px;font-size:13px;font-weight:700;}
+.notes{margin:20px 0 0;padding-left:1.3em;font-size:14.5px;line-height:1.9;}
+.cta-note{margin:8px 0 0;text-align:center;font-size:13px;}
+.info-tbl th{width:26%;}
+.info-tbl .note{color:var(--ink);font-size:13px;margin-top:2px;}
+.info-date{font-weight:900;color:var(--red);font-size:17px;}
+
+/* 冒頭の p{color:#000!important} より優先する */
+.hero-go{color:var(--navy)!important;}
+.steps4 .st-step{color:var(--accent)!important;}
+.answer-box p{color:#fff!important;}
+.answer-box .answer-go{color:var(--yellow)!important;}
+footer p{color:#fff!important;}
+
+@media print{
+  header{position:static;}
+}
+/* ===== 緊急対策PHP：ここまで ===== */
